@@ -1,0 +1,870 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book 爬虫 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>json文件存储 | 爬虫</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-mcqx/mcqx.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fbqx/fbqx.css">
+        
+    
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-sectionx/sectionx.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../files/csv.html" />
+    
+    
+    <link rel="prev" href="../files/txt.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="3.2"
+        data-chapter-title="json文件存储"
+        data-filepath="files/json.md"
+        data-basepath=".."
+        data-revision="Thu Mar 28 2019 01:32:46 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        爬虫
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="files/readme.html">
+            
+                
+                    <a href="../files/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        爬虫基础
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="files/spider01.html">
+            
+                
+                    <a href="../files/spider01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        爬虫基本原理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="files/spider02.html">
+            
+                
+                    <a href="../files/spider02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        python3编码问题
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="files/spider03.html">
+            
+                
+                    <a href="../files/spider03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        requests基础应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="files/spider04.html">
+            
+                
+                    <a href="../files/spider04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        requests进阶
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="files/spider05.html">
+            
+                
+                    <a href="../files/spider05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        抓包工具fiddler
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="files/spider06.html">
+            
+                
+                    <a href="../files/spider06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        了解:urllib
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="files/jiexi.html">
+            
+                
+                    <a href="../files/jiexi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        爬虫解析库
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="files/re.html">
+            
+                
+                    <a href="../files/re.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        正则表达式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="files/re0.html">
+            
+                
+                    <a href="../files/re0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        正则表达式案例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="files/xpath0.html">
+            
+                
+                    <a href="../files/xpath0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        xpath
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="files/xpath01.html">
+            
+                
+                    <a href="../files/xpath01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        xpath案例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="files/bs01.html">
+            
+                
+                    <a href="../files/bs01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        beautiful soup(了解)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="files/bs02.html">
+            
+                
+                    <a href="../files/bs02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        beautiful soup案例
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="files/shuju.html">
+            
+                
+                    <a href="../files/shuju.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        数据存储
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="files/txt.html">
+            
+                
+                    <a href="../files/txt.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        txt文件存储
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="files/json.html">
+            
+                
+                    <a href="../files/json.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        json文件存储
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="files/csv.html">
+            
+                
+                    <a href="../files/csv.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        csv文件存储
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="files/threading.html">
+            
+                
+                    <a href="../files/threading.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        案例:多线程爬虫+json存储
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="files/dt.html">
+            
+                
+                    <a href="../files/dt.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        动态渲染页面爬取
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="files/dt01.html">
+            
+                
+                    <a href="../files/dt01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        动态html
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="files/dt02.html">
+            
+                
+                    <a href="../files/dt02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        selenium+phantosJS
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="files/dt03.html">
+            
+                
+                    <a href="../files/dt03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        网站模拟登录
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="files/dt04.html">
+            
+                
+                    <a href="../files/dt04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        动态页面模拟点击
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="files/dt05.html">
+            
+                
+                    <a href="../files/dt05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        执行js语句
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="files/scrapy.html">
+            
+                
+                    <a href="../files/scrapy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Scrapy框架
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="files/scrapy01.html">
+            
+                
+                    <a href="../files/scrapy01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Scrapy安装配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="files/scrapy02.html">
+            
+                
+                    <a href="../files/scrapy02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Scrapy shell
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="files/scrapy03.html">
+            
+                
+                    <a href="../files/scrapy03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Item  Pipeline
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="files/scrapy04.html">
+            
+                
+                    <a href="../files/scrapy04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Spider
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="files/scrapy05.html">
+            
+                
+                    <a href="../files/scrapy05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        CrawlSpider
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="files/scrapy06.html">
+            
+                
+                    <a href="../files/scrapy06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        Request/Response
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="files/scrapy07.html">
+            
+                
+                    <a href="../files/scrapy07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        Downloader Middlewares
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="files/scrapy08.html">
+            
+                
+                    <a href="../files/scrapy08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                        settings
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >爬虫</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="json&#x6587;&#x4EF6;&#x5B58;&#x50A8;">json&#x6587;&#x4EF6;&#x5B58;&#x50A8;</h1>
+<p>JSON(JavaScript Object Notation) &#x662F;&#x4E00;&#x79CD;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x683C;&#x5F0F;&#xFF0C;&#x5B83;&#x4F7F;&#x5F97;&#x4EBA;&#x4EEC;&#x5F88;&#x5BB9;&#x6613;&#x7684;&#x8FDB;&#x884C;&#x9605;&#x8BFB;&#x548C;&#x7F16;&#x5199;&#x3002;&#x540C;&#x65F6;&#x4E5F;&#x65B9;&#x4FBF;&#x4E86;&#x673A;&#x5668;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#x548C;&#x751F;&#x6210;&#x3002;&#x9002;&#x7528;&#x4E8E;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x6BD4;&#x5982;&#x7F51;&#x7AD9;&#x524D;&#x53F0;&#x4E0E;&#x540E;&#x53F0;&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#x3002;</p>
+<p>JSON&#x548C;XML&#x7684;&#x6BD4;&#x8F83;&#x53EF;&#x8C13;&#x4E0D;&#x76F8;&#x4E0A;&#x4E0B;&#x3002;</p>
+<p>Python 2.7&#x4E2D;&#x81EA;&#x5E26;&#x4E86;JSON&#x6A21;&#x5757;&#xFF0C;&#x76F4;&#x63A5;<code>import json</code>&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E86;&#x3002;</p>
+<p>&#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF1A;<a href="http://docs.python.org/library/json.html" target="_blank">http://docs.python.org/library/json.html</a></p>
+<p>Json&#x5728;&#x7EBF;&#x89E3;&#x6790;&#x7F51;&#x7AD9;&#xFF1A;<a href="http://www.json.cn/" target="_blank">http://www.json.cn/</a></p>
+<p>json&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x4E86;&#x56DB;&#x4E2A;&#x529F;&#x80FD;&#xFF1A;<code>dumps</code>&#x3001;<code>dump</code>&#x3001;<code>loads</code>&#x3001;<code>load</code>&#xFF0C;&#x7528;&#x4E8E;&#x5B57;&#x7B26;&#x4E32; &#x548C; python&#x6570;&#x636E;&#x7C7B;&#x578B;&#x95F4;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x3002;</p>
+<h2 id="1-jsonloads">1. json.loads()</h2>
+<p>&#x628A;Json&#x683C;&#x5F0F;&#x5B57;&#x7B26;&#x4E32;&#x89E3;&#x7801;&#x8F6C;&#x6362;&#x6210;Python&#x5BF9;&#x8C61; &#x4ECE;json&#x5230;python&#x7684;&#x7C7B;&#x578B;&#x8F6C;&#x5316;&#x5BF9;&#x7167;&#x5982;&#x4E0B;&#xFF1A;<img src="../images/json2.png" alt="img"></p>
+<pre><code class="lang-python"><span class="hljs-comment"># json_loads.py</span>
+
+<span class="hljs-keyword">import</span> json
+
+strList = <span class="hljs-string">&apos;[1, 2, 3, 4]&apos;</span>
+
+strDict = <span class="hljs-string">&apos;{&quot;city&quot;: &quot;&#x5317;&#x4EAC;&quot;, &quot;name&quot;: &quot;&#x5F20;&#x4E09;&quot;}&apos;</span>
+
+json.loads(strList)
+<span class="hljs-comment"># [1, 2, 3, 4]</span>
+
+json.loads(strDict) 
+<span class="hljs-comment"># {&apos;city&apos;: &apos;&#x5317;&#x4EAC;&apos;, &apos;name&apos;: &apos;&#x5F20;&#x4E09;&apos;}</span>
+</code></pre>
+<h2 id="2-jsondumps">2. json.dumps()</h2>
+<p>&#x5B9E;&#x73B0;python&#x7C7B;&#x578B;&#x8F6C;&#x5316;&#x4E3A;json&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;str&#x5BF9;&#x8C61; &#x628A;&#x4E00;&#x4E2A;Python&#x5BF9;&#x8C61;&#x7F16;&#x7801;&#x8F6C;&#x6362;&#x6210;Json&#x5B57;&#x7B26;&#x4E32;</p>
+<p>&#x4ECE;python&#x539F;&#x59CB;&#x7C7B;&#x578B;&#x5411;json&#x7C7B;&#x578B;&#x7684;&#x8F6C;&#x5316;&#x5BF9;&#x7167;&#x5982;&#x4E0B;</p>
+<p><img src="../images/json.png" alt="img"></p>
+<pre><code class="lang-python"><span class="hljs-comment"># json_dumps.py</span>
+
+<span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> chardet
+
+listStr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+tupleStr = (<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+dictStr = {<span class="hljs-string">&apos;city&apos;</span>: <span class="hljs-string">&apos;&#x5317;&#x4EAC;&apos;</span>, <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;&#x5F20;&#x4E09;&apos;</span>}
+
+json.dumps(listStr)
+<span class="hljs-comment"># &apos;[1, 2, 3, 4]&apos;</span>
+json.dumps(tupleStr)
+<span class="hljs-comment"># &apos;[1, 2, 3, 4]&apos;</span>
+
+<span class="hljs-comment"># &#x6CE8;&#x610F;&#xFF1A;json.dumps() &#x5E8F;&#x5217;&#x5316;&#x65F6;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7684;ascii&#x7F16;&#x7801;</span>
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x53C2;&#x6570; ensure_ascii=False &#x7981;&#x7528;ascii&#x7F16;&#x7801;&#xFF0C;&#x6309;utf-8&#x7F16;&#x7801;</span>
+<span class="hljs-comment"># chardet.detect()&#x8FD4;&#x56DE;&#x5B57;&#x5178;, &#x5176;&#x4E2D;confidence&#x662F;&#x68C0;&#x6D4B;&#x7CBE;&#x786E;&#x5EA6;</span>
+
+json.dumps(dictStr)
+<span class="hljs-comment"># &apos;{&quot;city&quot;: &quot;\\u5317\\u4eac&quot;, &quot;name&quot;: &quot;\\u5f20\\u4e09&quot;}&apos; #json&#x6570;&#x636E;&#x81EA;&#x52A8;&#x6309;Unicode&#x5B58;&#x50A8;</span>
+
+
+print(json.dumps(dictStr, ensure_ascii=<span class="hljs-keyword">False</span>))
+<span class="hljs-comment"># {&quot;city&quot;: &quot;&#x5317;&#x4EAC;&quot;, &quot;name&quot;: &quot;&#x5F20;&#x4E09;&quot;}</span>
+</code></pre>
+<h2 id="3-jsondump">3. json.dump()</h2>
+<p>&#x5C06;Python&#x5185;&#x7F6E;&#x7C7B;&#x578B;&#x5E8F;&#x5217;&#x5316;&#x4E3A;json&#x5BF9;&#x8C61;&#x540E;&#x5199;&#x5165;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># json_dump.py</span>
+
+<span class="hljs-keyword">import</span> json
+
+listStr = [{<span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;&#x5317;&#x4EAC;&quot;</span>}, {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x5F20;&#x4E09;&quot;</span>}]
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;liststr.json&apos;</span>,<span class="hljs-string">&apos;w&apos;</span>,encoding=<span class="hljs-string">&apos;utf-8-sig&apos;</span>) <span class="hljs-keyword">as</span> f:
+    json.dump(listStr,f,ensure_ascii=<span class="hljs-keyword">False</span>)
+
+dictStr = {<span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;&#x5317;&#x4EAC;&quot;</span>, <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x5F20;&#x4E09;&quot;</span>}
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;dictstr.json&apos;</span>,<span class="hljs-string">&apos;w&apos;</span>,encoding=<span class="hljs-string">&apos;utf-8-sig&apos;</span>) <span class="hljs-keyword">as</span> f:
+    json.dump(dictStr,f, ensure_ascii=<span class="hljs-keyword">False</span>)
+</code></pre>
+<h2 id="4-jsonload">4. json.load()</h2>
+<p>&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x4E2D;json&#x5F62;&#x5F0F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5143;&#x7D20; &#x8F6C;&#x5316;&#x6210;python&#x7C7B;&#x578B;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># json_load.py</span>
+
+<span class="hljs-keyword">import</span> json
+
+strList = json.load(open(<span class="hljs-string">&quot;liststr.json&quot;</span>,encoding=<span class="hljs-string">&apos;utf-8-sig&apos;</span>))
+print(strList)
+
+
+strDict = json.load(open(<span class="hljs-string">&quot;dictstr.json&quot;</span>,encoding=<span class="hljs-string">&apos;utf-8-sig&apos;</span>))
+print(strDict)
+</code></pre>
+<footer class="page-footer"><span class="copyright">CopyRight&#xA9;2019 &#x54B8;&#x9C7C;&#x8D85;&#x4EBA; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-03-25 00:11:21
+</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../files/txt.html" class="navigation navigation-prev " aria-label="Previous page: txt文件存储"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../files/csv.html" class="navigation navigation-next " aria-label="Next page: csv文件存储"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mcqx/js.cookie.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mcqx/mcqx.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fbqx/fbqx.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fbqx/js.cookie.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sectionx/sectionx.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"tbfed-pagefooter":{"copyright":"CopyRight©2019 咸鱼超人","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"sectionx":{"tag":"b"},"toggle-chapters":{},"splitter":{},"emphasize":{},"mcqx":{},"katex":{},"fbqx":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book 爬虫 -->
+</html>

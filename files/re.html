@@ -1,0 +1,1078 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book 爬虫 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>正则表达式 | 爬虫</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-mcqx/mcqx.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fbqx/fbqx.css">
+        
+    
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-sectionx/sectionx.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../files/re0.html" />
+    
+    
+    <link rel="prev" href="../files/jiexi.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="2.1"
+        data-chapter-title="正则表达式"
+        data-filepath="files/re.md"
+        data-basepath=".."
+        data-revision="Thu Mar 28 2019 01:32:46 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        爬虫
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="files/readme.html">
+            
+                
+                    <a href="../files/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        爬虫基础
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="files/spider01.html">
+            
+                
+                    <a href="../files/spider01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        爬虫基本原理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="files/spider02.html">
+            
+                
+                    <a href="../files/spider02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        python3编码问题
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="files/spider03.html">
+            
+                
+                    <a href="../files/spider03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        requests基础应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="files/spider04.html">
+            
+                
+                    <a href="../files/spider04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        requests进阶
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="files/spider05.html">
+            
+                
+                    <a href="../files/spider05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        抓包工具fiddler
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="files/spider06.html">
+            
+                
+                    <a href="../files/spider06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        了解:urllib
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="files/jiexi.html">
+            
+                
+                    <a href="../files/jiexi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        爬虫解析库
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.1" data-path="files/re.html">
+            
+                
+                    <a href="../files/re.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        正则表达式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="files/re0.html">
+            
+                
+                    <a href="../files/re0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        正则表达式案例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="files/xpath0.html">
+            
+                
+                    <a href="../files/xpath0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        xpath
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="files/xpath01.html">
+            
+                
+                    <a href="../files/xpath01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        xpath案例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="files/bs01.html">
+            
+                
+                    <a href="../files/bs01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        beautiful soup(了解)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="files/bs02.html">
+            
+                
+                    <a href="../files/bs02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        beautiful soup案例
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="files/shuju.html">
+            
+                
+                    <a href="../files/shuju.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        数据存储
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="files/txt.html">
+            
+                
+                    <a href="../files/txt.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        txt文件存储
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="files/json.html">
+            
+                
+                    <a href="../files/json.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        json文件存储
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="files/csv.html">
+            
+                
+                    <a href="../files/csv.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        csv文件存储
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="files/threading.html">
+            
+                
+                    <a href="../files/threading.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        案例:多线程爬虫+json存储
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="files/dt.html">
+            
+                
+                    <a href="../files/dt.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        动态渲染页面爬取
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="files/dt01.html">
+            
+                
+                    <a href="../files/dt01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        动态html
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="files/dt02.html">
+            
+                
+                    <a href="../files/dt02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        selenium+phantosJS
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="files/dt03.html">
+            
+                
+                    <a href="../files/dt03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        网站模拟登录
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="files/dt04.html">
+            
+                
+                    <a href="../files/dt04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        动态页面模拟点击
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="files/dt05.html">
+            
+                
+                    <a href="../files/dt05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        执行js语句
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="files/scrapy.html">
+            
+                
+                    <a href="../files/scrapy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Scrapy框架
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="files/scrapy01.html">
+            
+                
+                    <a href="../files/scrapy01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Scrapy安装配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="files/scrapy02.html">
+            
+                
+                    <a href="../files/scrapy02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Scrapy shell
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="files/scrapy03.html">
+            
+                
+                    <a href="../files/scrapy03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Item  Pipeline
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="files/scrapy04.html">
+            
+                
+                    <a href="../files/scrapy04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Spider
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="files/scrapy05.html">
+            
+                
+                    <a href="../files/scrapy05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        CrawlSpider
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="files/scrapy06.html">
+            
+                
+                    <a href="../files/scrapy06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        Request/Response
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="files/scrapy07.html">
+            
+                
+                    <a href="../files/scrapy07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        Downloader Middlewares
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="files/scrapy08.html">
+            
+                
+                    <a href="../files/scrapy08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                        settings
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >爬虫</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;">&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</h1>
+<h2 id="python-&#x7684;-re-&#x6A21;&#x5757;">Python &#x7684; re &#x6A21;&#x5757;</h2>
+<p>&#x5728; Python &#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x7684; re &#x6A21;&#x5757;&#x6765;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x3002;</p>
+<p>&#x6709;&#x4E00;&#x70B9;&#x9700;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4F7F;&#x7528; &#x5BF9;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x8FDB;&#x884C;&#x8F6C;&#x4E49;&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8981;&#x4F7F;&#x7528;&#x539F;&#x59CB;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x53EA;&#x9700;&#x52A0;&#x4E00;&#x4E2A; r &#x524D;&#x7F00;&#xFF0C;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>r&apos;hengqijiaoyu\t\.\tpython&apos;
+</code></pre><h2 id="re-&#x6A21;&#x5757;&#x7684;&#x4E00;&#x822C;&#x4F7F;&#x7528;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;">re &#x6A21;&#x5757;&#x7684;&#x4E00;&#x822C;&#x4F7F;&#x7528;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;</h2>
+<ol>
+<li>&#x4F7F;&#x7528; compile() &#x51FD;&#x6570;&#x5C06;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#x7F16;&#x8BD1;&#x4E3A;&#x4E00;&#x4E2A; Pattern &#x5BF9;&#x8C61;</li>
+<li>&#x901A;&#x8FC7; Pattern &#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x65B9;&#x6CD5;&#x5BF9;&#x6587;&#x672C;&#x8FDB;&#x884C;&#x5339;&#x914D;&#x67E5;&#x627E;&#xFF0C;&#x83B7;&#x5F97;&#x5339;&#x914D;&#x7ED3;&#x679C;:&#x4E00;&#x4E2A; Match &#x5BF9;&#x8C61;&#x3002;</li>
+<li>&#x6700;&#x540E;&#x4F7F;&#x7528; Match &#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x83B7;&#x5F97;&#x4FE1;&#x606F;&#xFF0C;&#x6839;&#x636E;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x5176;&#x4ED6;&#x7684;&#x64CD;&#x4F5C;</li>
+</ol>
+<h3 id="compile-&#x51FD;&#x6570;">compile &#x51FD;&#x6570;</h3>
+<p>compile &#x51FD;&#x6570;&#x7528;&#x4E8E;&#x7F16;&#x8BD1;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x751F;&#x6210;&#x4E00;&#x4E2A; Pattern &#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x7684;&#x4E00;&#x822C;&#x4F7F;&#x7528;&#x5F62;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+
+<span class="hljs-comment"># &#x5C06;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7F16;&#x8BD1;&#x6210; Pattern &#x5BF9;&#x8C61;</span>
+pattern = re.compile(<span class="hljs-string">r&apos;\d+&apos;</span>)
+</code></pre>
+<p>&#x5728;&#x4E0A;&#x9762;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x5C06;&#x4E00;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7F16;&#x8BD1;&#x6210; Pattern &#x5BF9;&#x8C61;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5229;&#x7528; pattern &#x7684;&#x4E00;&#x7CFB;&#x5217;&#x65B9;&#x6CD5;&#x5BF9;&#x6587;&#x672C;&#x8FDB;&#x884C;&#x5339;&#x914D;&#x67E5;&#x627E;&#x4E86;&#x3002;</p>
+<p>Pattern &#x5BF9;&#x8C61;&#x7684;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x6709;&#xFF1A;</p>
+<blockquote>
+<p>match &#x65B9;&#x6CD5;&#xFF1A;&#x4ECE;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x67E5;&#x627E;&#xFF0C;&#x4E00;&#x6B21;&#x5339;&#x914D; search &#x65B9;&#x6CD5;&#xFF1A;&#x4ECE;&#x4EFB;&#x4F55;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x67E5;&#x627E;&#xFF0C;&#x4E00;&#x6B21;&#x5339;&#x914D; findall &#x65B9;&#x6CD5;&#xFF1A;&#x5168;&#x90E8;&#x5339;&#x914D;&#xFF0C;&#x8FD4;&#x56DE;&#x5217;&#x8868; finditer &#x65B9;&#x6CD5;&#xFF1A;&#x5168;&#x90E8;&#x5339;&#x914D;&#xFF0C;&#x8FD4;&#x56DE;&#x8FED;&#x4EE3;&#x5668; split &#x65B9;&#x6CD5;&#xFF1A;&#x5206;&#x5272;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8FD4;&#x56DE;&#x5217;&#x8868; sub &#x65B9;&#x6CD5;&#xFF1A;&#x66FF;&#x6362;</p>
+</blockquote>
+<h3 id="match-&#x65B9;&#x6CD5;">match &#x65B9;&#x6CD5;</h3>
+<p>match &#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x67E5;&#x627E;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5934;&#x90E8;&#xFF08;&#x4E5F;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#xFF09;&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x6B21;&#x5339;&#x914D;&#xFF0C;&#x53EA;&#x8981;&#x627E;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x8FD4;&#x56DE;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x67E5;&#x627E;&#x6240;&#x6709;&#x5339;&#x914D;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5B83;&#x7684;&#x4E00;&#x822C;&#x4F7F;&#x7528;&#x5F62;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>match(string[, pos[, endpos]])</p>
+<p>&#x5176;&#x4E2D;&#xFF0C;string &#x662F;&#x5F85;&#x5339;&#x914D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;pos &#x548C; endpos &#x662F;&#x53EF;&#x9009;&#x53C2;&#x6570;&#xFF0C;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x8D77;&#x59CB;&#x548C;&#x7EC8;&#x70B9;&#x4F4D;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x5206;&#x522B;&#x662F; 0 &#x548C; len (&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;)&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5F53;&#x4F60;&#x4E0D;&#x6307;&#x5B9A; pos &#x548C; endpos &#x65F6;&#xFF0C;match &#x65B9;&#x6CD5;&#x9ED8;&#x8BA4;&#x5339;&#x914D;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5934;&#x90E8;&#x3002;</p>
+<p>&#x5F53;&#x5339;&#x914D;&#x6210;&#x529F;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; Match &#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5339;&#x914D;&#x4E0A;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; None&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+
+pattern = re.compile(<span class="hljs-string">r&apos;\d+&apos;</span>)  <span class="hljs-comment"># &#x7528;&#x4E8E;&#x5339;&#x914D;&#x81F3;&#x5C11;&#x4E00;&#x4E2A;&#x6570;&#x5B57;</span>
+
+m = pattern.match(<span class="hljs-string">&apos;one12twothree34four&apos;</span>)  <span class="hljs-comment"># &#x67E5;&#x627E;&#x5934;&#x90E8;&#xFF0C;&#x6CA1;&#x6709;&#x5339;&#x914D;</span>
+print(m)
+
+n = pattern.match(<span class="hljs-string">&apos;one12twothree34four&apos;</span>, <span class="hljs-number">2</span>, <span class="hljs-number">10</span>)  <span class="hljs-comment"># &#x4ECE;&apos;e&apos;&#x7684;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x5339;&#x914D;&#xFF0C;&#x6CA1;&#x6709;&#x5339;&#x914D;</span>
+print(n)
+
+o = pattern.match(<span class="hljs-string">&apos;one12twothree34four&apos;</span>, <span class="hljs-number">3</span>, <span class="hljs-number">10</span>)  <span class="hljs-comment"># &#x4ECE;&apos;1&apos;&#x7684;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x5339;&#x914D;&#xFF0C;&#x6B63;&#x597D;&#x5339;&#x914D;</span>
+print(o)
+
+print(o.group())
+print(o.start())
+print(o.end())
+print(o.span())
+
+<span class="hljs-keyword">None</span>
+<span class="hljs-keyword">None</span>
+&lt;_sre.SRE_Match object; span=(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>), match=<span class="hljs-string">&apos;12&apos;</span>&gt;
+<span class="hljs-number">12</span>
+<span class="hljs-number">3</span>
+<span class="hljs-number">5</span>
+(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>)
+</code></pre>
+<p>&#x5728;&#x4E0A;&#x9762;&#xFF0C;&#x5F53;&#x5339;&#x914D;&#x6210;&#x529F;&#x65F6;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; Match &#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#xFF1A;</p>
+<ul>
+<li>group([group1, &#x2026;]) &#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x83B7;&#x5F97;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5206;&#x7EC4;&#x5339;&#x914D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5F53;&#x8981;&#x83B7;&#x5F97;&#x6574;&#x4E2A;&#x5339;&#x914D;&#x7684;&#x5B50;&#x4E32;&#x65F6;&#xFF0C;&#x53EF;&#x76F4;&#x63A5;&#x4F7F;&#x7528; group() &#x6216; group(0)&#xFF1B;</li>
+<li>start([group]) &#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x5206;&#x7EC4;&#x5339;&#x914D;&#x7684;&#x5B50;&#x4E32;&#x5728;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#xFF08;&#x5B50;&#x4E32;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x7684;&#x7D22;&#x5F15;&#xFF09;&#xFF0C;&#x53C2;&#x6570;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF1B;</li>
+<li>end([group]) &#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x5206;&#x7EC4;&#x5339;&#x914D;&#x7684;&#x5B50;&#x4E32;&#x5728;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;&#xFF08;&#x5B50;&#x4E32;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x7684;&#x7D22;&#x5F15;+1&#xFF09;&#xFF0C;&#x53C2;&#x6570;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; 0&#xFF1B;</li>
+<li>span([group]) &#x65B9;&#x6CD5;&#x8FD4;&#x56DE; (start(group), end(group))&#x3002;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+
+pattern = re.compile(<span class="hljs-string">r&apos;([a-z]+) ([a-z]+)&apos;</span>, re.I)  <span class="hljs-comment"># re.I &#x8868;&#x793A;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;</span>
+m = pattern.match(<span class="hljs-string">&apos;Hello World Wide Web&apos;</span>)
+
+print(m)
+
+print(m.group(<span class="hljs-number">0</span>))  <span class="hljs-comment"># &#x8FD4;&#x56DE;&#x5339;&#x914D;&#x6210;&#x529F;&#x7684;&#x6574;&#x4E2A;&#x5B50;&#x4E32;</span>
+
+print(m.span(<span class="hljs-number">0</span>))  <span class="hljs-comment"># &#x8FD4;&#x56DE;&#x5339;&#x914D;&#x6210;&#x529F;&#x7684;&#x6574;&#x4E2A;&#x5B50;&#x4E32;&#x7684;&#x7D22;&#x5F15;</span>
+
+print(m.group(<span class="hljs-number">1</span>))  <span class="hljs-comment"># &#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x5206;&#x7EC4;&#x5339;&#x914D;&#x6210;&#x529F;&#x7684;&#x5B50;&#x4E32;</span>
+
+print(m.span(<span class="hljs-number">1</span>))  <span class="hljs-comment"># &#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x5206;&#x7EC4;&#x5339;&#x914D;&#x6210;&#x529F;&#x7684;&#x5B50;&#x4E32;&#x7684;&#x7D22;&#x5F15;</span>
+
+print(m.group(<span class="hljs-number">2</span>))  <span class="hljs-comment"># &#x8FD4;&#x56DE;&#x7B2C;&#x4E8C;&#x4E2A;&#x5206;&#x7EC4;&#x5339;&#x914D;&#x6210;&#x529F;&#x7684;&#x5B50;&#x4E32;</span>
+
+print(m.span(<span class="hljs-number">2</span>))  <span class="hljs-comment"># &#x8FD4;&#x56DE;&#x7B2C;&#x4E8C;&#x4E2A;&#x5206;&#x7EC4;&#x5339;&#x914D;&#x6210;&#x529F;&#x7684;&#x5B50;&#x4E32;</span>
+
+print(m.groups())  <span class="hljs-comment"># &#x7B49;&#x4EF7;&#x4E8E; (m.group(1), m.group(2), ...)</span>
+
+print(m.group(<span class="hljs-number">3</span>))  <span class="hljs-comment"># &#x4E0D;&#x5B58;&#x5728;&#x7B2C;&#x4E09;&#x4E2A;&#x5206;&#x7EC4;</span>
+
+&lt;_sre.SRE_Match object; span=(<span class="hljs-number">0</span>, <span class="hljs-number">11</span>), match=<span class="hljs-string">&apos;Hello World&apos;</span>&gt;
+Hello World
+(<span class="hljs-number">0</span>, <span class="hljs-number">11</span>)
+Hello
+(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>)
+World
+(<span class="hljs-number">6</span>, <span class="hljs-number">11</span>)
+(<span class="hljs-string">&apos;Hello&apos;</span>, <span class="hljs-string">&apos;World&apos;</span>)
+
+Traceback (most recent call last):
+  File <span class="hljs-string">&quot;/home/python/PycharmProjects/untitled2/test.py&quot;</span>, line <span class="hljs-number">22</span>, <span class="hljs-keyword">in</span> &lt;module&gt;
+    print(m.group(<span class="hljs-number">3</span>))  <span class="hljs-comment"># &#x4E0D;&#x5B58;&#x5728;&#x7B2C;&#x4E09;&#x4E2A;&#x5206;&#x7EC4;</span>
+IndexError: no such group
+</code></pre>
+<h2 id="search-&#x65B9;&#x6CD5;">search &#x65B9;&#x6CD5;</h2>
+<p>search &#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x67E5;&#x627E;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x4EFB;&#x4F55;&#x4F4D;&#x7F6E;&#xFF0C;&#x5B83;&#x4E5F;&#x662F;&#x4E00;&#x6B21;&#x5339;&#x914D;&#xFF0C;&#x53EA;&#x8981;&#x627E;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x8FD4;&#x56DE;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x67E5;&#x627E;&#x6240;&#x6709;&#x5339;&#x914D;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x5B83;&#x7684;&#x4E00;&#x822C;&#x4F7F;&#x7528;&#x5F62;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>search(string[, pos[, endpos]])</p>
+<p>&#x5176;&#x4E2D;&#xFF0C;string &#x662F;&#x5F85;&#x5339;&#x914D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;pos &#x548C; endpos &#x662F;&#x53EF;&#x9009;&#x53C2;&#x6570;&#xFF0C;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x8D77;&#x59CB;&#x548C;&#x7EC8;&#x70B9;&#x4F4D;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x5206;&#x522B;&#x662F; 0 &#x548C; len (&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;)&#x3002;</p>
+<p>&#x5F53;&#x5339;&#x914D;&#x6210;&#x529F;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; Match &#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5339;&#x914D;&#x4E0A;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; None&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x770B;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+
+pattern = re.compile(<span class="hljs-string">&apos;\d+&apos;</span>)
+m = pattern.search(<span class="hljs-string">&apos;one12twothree34four&apos;</span>)  <span class="hljs-comment"># &#x8FD9;&#x91CC;&#x5982;&#x679C;&#x4F7F;&#x7528; match &#x65B9;&#x6CD5;&#x5219;&#x4E0D;&#x5339;&#x914D;</span>
+print(m)
+
+print(m.group())
+
+o = pattern.search(<span class="hljs-string">&apos;one12twothree34four&apos;</span>, <span class="hljs-number">10</span>, <span class="hljs-number">30</span>)  <span class="hljs-comment"># &#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x533A;&#x95F4;</span>
+print(o)
+
+print(o.group())
+
+print(o.span())
+
+&lt;_sre.SRE_Match object; span=(<span class="hljs-number">3</span>, <span class="hljs-number">5</span>), match=<span class="hljs-string">&apos;12&apos;</span>&gt;
+<span class="hljs-number">12</span>
+&lt;_sre.SRE_Match object; span=(<span class="hljs-number">13</span>, <span class="hljs-number">15</span>), match=<span class="hljs-string">&apos;34&apos;</span>&gt;
+<span class="hljs-number">34</span>
+(<span class="hljs-number">13</span>, <span class="hljs-number">15</span>)
+
+
+<span class="hljs-keyword">import</span> re
+<span class="hljs-comment"># &#x5C06;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7F16;&#x8BD1;&#x6210; Pattern &#x5BF9;&#x8C61;</span>
+pattern = re.compile(<span class="hljs-string">r&apos;\d+&apos;</span>)
+<span class="hljs-comment"># &#x4F7F;&#x7528; search() &#x67E5;&#x627E;&#x5339;&#x914D;&#x7684;&#x5B50;&#x4E32;&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x5339;&#x914D;&#x7684;&#x5B50;&#x4E32;&#x65F6;&#x5C06;&#x8FD4;&#x56DE; None</span>
+<span class="hljs-comment"># &#x8FD9;&#x91CC;&#x4F7F;&#x7528; match() &#x65E0;&#x6CD5;&#x6210;&#x529F;&#x5339;&#x914D;</span>
+m = pattern.search(<span class="hljs-string">&apos;hello 123456 789&apos;</span>)
+<span class="hljs-keyword">if</span> m:
+    <span class="hljs-comment"># &#x4F7F;&#x7528; Match &#x83B7;&#x5F97;&#x5206;&#x7EC4;&#x4FE1;&#x606F;</span>
+    <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;matching string:&apos;</span>,m.group()
+    <span class="hljs-comment"># &#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x548C;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;</span>
+    <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;position:&apos;</span>,m.span()
+
+matching string: <span class="hljs-number">123456</span>
+position: (<span class="hljs-number">6</span>, <span class="hljs-number">12</span>)
+</code></pre>
+<h2 id="findall-&#x65B9;&#x6CD5;">findall &#x65B9;&#x6CD5;</h2>
+<p>&#x4E0A;&#x9762;&#x7684; match &#x548C; search &#x65B9;&#x6CD5;&#x90FD;&#x662F;&#x4E00;&#x6B21;&#x5339;&#x914D;&#xFF0C;&#x53EA;&#x8981;&#x627E;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x8FD4;&#x56DE;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x5728;&#x5927;&#x591A;&#x6570;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x641C;&#x7D22;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x83B7;&#x5F97;&#x6240;&#x6709;&#x5339;&#x914D;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<p>findall &#x65B9;&#x6CD5;&#x7684;&#x4F7F;&#x7528;&#x5F62;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>findall(string[, pos[, endpos]])</p>
+<p>&#x5176;&#x4E2D;&#xFF0C;string &#x662F;&#x5F85;&#x5339;&#x914D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;pos &#x548C; endpos &#x662F;&#x53EF;&#x9009;&#x53C2;&#x6570;&#xFF0C;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x8D77;&#x59CB;&#x548C;&#x7EC8;&#x70B9;&#x4F4D;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x5206;&#x522B;&#x662F; 0 &#x548C; len (&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;)&#x3002;</p>
+<p>findall &#x4EE5;&#x5217;&#x8868;&#x5F62;&#x5F0F;&#x8FD4;&#x56DE;&#x5168;&#x90E8;&#x80FD;&#x5339;&#x914D;&#x7684;&#x5B50;&#x4E32;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5339;&#x914D;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7A7A;&#x5217;&#x8868;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+pattern = re.compile(<span class="hljs-string">r&apos;\d+&apos;</span>)   <span class="hljs-comment"># &#x67E5;&#x627E;&#x6570;&#x5B57;</span>
+
+result1 = pattern.findall(<span class="hljs-string">&apos;hello 123456 789&apos;</span>)
+result2 = pattern.findall(<span class="hljs-string">&apos;one1two2three3four4&apos;</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>)
+
+print(result1)
+print(result2)
+
+[<span class="hljs-string">&apos;123456&apos;</span>, <span class="hljs-string">&apos;789&apos;</span>]
+[<span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-string">&apos;2&apos;</span>]
+
+
+
+<span class="hljs-keyword">import</span> re
+
+<span class="hljs-comment">#re&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x53EB;compile&#x6A21;&#x5757;&#xFF0C;&#x63D0;&#x4F9B;&#x6211;&#x4EEC;&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x7684;&#x89C4;&#x5219;</span>
+<span class="hljs-comment">#&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;pattern&#x5B9E;&#x4F8B;&#xFF0C;&#x6211;&#x4EEC;&#x6839;&#x636E;&#x8FD9;&#x4E2A;&#x89C4;&#x5219;&#x53BB;&#x5339;&#x914D;&#x5B57;&#x7B26;&#x4E32;</span>
+pattern = re.compile(<span class="hljs-string">r&apos;\d+\.\d*&apos;</span>)
+
+<span class="hljs-comment">#&#x901A;&#x8FC7;partten.findall()&#x65B9;&#x6CD5;&#x5C31;&#x80FD;&#x591F;&#x5168;&#x90E8;&#x5339;&#x914D;&#x5230;&#x6211;&#x4EEC;&#x5F97;&#x5230;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span>
+result = pattern.findall(<span class="hljs-string">&quot;123.141593, &apos;bigcat&apos;, 232312, 3.15&quot;</span>)
+
+<span class="hljs-comment">#findall &#x4EE5; &#x5217;&#x8868;&#x5F62;&#x5F0F; &#x8FD4;&#x56DE;&#x5168;&#x90E8;&#x80FD;&#x5339;&#x914D;&#x7684;&#x5B50;&#x4E32;&#x7ED9;result</span>
+<span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> result:
+    print(item)
+
+<span class="hljs-number">123.141593</span>
+<span class="hljs-number">3.15</span>
+</code></pre>
+<h2 id="finditer-&#x65B9;&#x6CD5;">finditer &#x65B9;&#x6CD5;</h2>
+<p>finditer &#x65B9;&#x6CD5;&#x7684;&#x884C;&#x4E3A;&#x8DDF; findall &#x7684;&#x884C;&#x4E3A;&#x7C7B;&#x4F3C;&#xFF0C;&#x4E5F;&#x662F;&#x641C;&#x7D22;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x83B7;&#x5F97;&#x6240;&#x6709;&#x5339;&#x914D;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x4F46;&#x5B83;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x987A;&#x5E8F;&#x8BBF;&#x95EE;&#x6BCF;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x7ED3;&#x679C;&#xFF08;Match &#x5BF9;&#x8C61;&#xFF09;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+pattern = re.compile(<span class="hljs-string">r&apos;\d+&apos;</span>)
+
+result_iter1 = pattern.finditer(<span class="hljs-string">&apos;hello 123456 789&apos;</span>)
+result_iter2 = pattern.finditer(<span class="hljs-string">&apos;one1two2three3four4&apos;</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>)
+
+print(type(result_iter1))
+print(type(result_iter2))
+
+print(<span class="hljs-string">&apos;result1...&apos;</span>)
+<span class="hljs-keyword">for</span> m1 <span class="hljs-keyword">in</span> result_iter1:   <span class="hljs-comment"># m1 &#x662F; Match &#x5BF9;&#x8C61;</span>
+    print(f<span class="hljs-string">&apos;matching string: {m1.group()}, position: {m1.span()}&apos;</span>)
+
+print(<span class="hljs-string">&apos;result2...&apos;</span>)
+<span class="hljs-keyword">for</span> m2 <span class="hljs-keyword">in</span> result_iter2:   <span class="hljs-comment"># m2 &#x662F; Match &#x5BF9;&#x8C61;</span>
+    print(f<span class="hljs-string">&apos;matching string: {m2.group()}, position: {m2.span()}&apos;</span>)
+
+&lt;type <span class="hljs-string">&apos;callable-iterator&apos;</span>&gt;
+&lt;type <span class="hljs-string">&apos;callable-iterator&apos;</span>&gt;
+result1...
+matching string: <span class="hljs-number">123456</span>, position: (<span class="hljs-number">6</span>, <span class="hljs-number">12</span>)
+matching string: <span class="hljs-number">789</span>, position: (<span class="hljs-number">13</span>, <span class="hljs-number">16</span>)
+result2...
+matching string: <span class="hljs-number">1</span>, position: (<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+matching string: <span class="hljs-number">2</span>, position: (<span class="hljs-number">7</span>, <span class="hljs-number">8</span>)
+</code></pre>
+<h2 id="split-&#x65B9;&#x6CD5;">split &#x65B9;&#x6CD5;</h2>
+<p>split &#x65B9;&#x6CD5;&#x6309;&#x7167;&#x80FD;&#x591F;&#x5339;&#x914D;&#x7684;&#x5B50;&#x4E32;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x5272;&#x540E;&#x8FD4;&#x56DE;&#x5217;&#x8868;&#xFF0C;&#x5B83;&#x7684;&#x4F7F;&#x7528;&#x5F62;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>split(string[, maxsplit])</p>
+<p>&#x5176;&#x4E2D;&#xFF0C;maxsplit &#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x6700;&#x5927;&#x5206;&#x5272;&#x6B21;&#x6570;&#xFF0C;&#x4E0D;&#x6307;&#x5B9A;&#x5C06;&#x5168;&#x90E8;&#x5206;&#x5272;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+p = re.compile(<span class="hljs-string">r&apos;[\s\,\;]+&apos;</span>)
+print(p.split(<span class="hljs-string">&apos;a,b;; c   d&apos;</span>))
+
+[<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>]
+</code></pre>
+<h2 id="sub-&#x65B9;&#x6CD5;">sub &#x65B9;&#x6CD5;</h2>
+<p>sub &#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x66FF;&#x6362;&#x3002;&#x5B83;&#x7684;&#x4F7F;&#x7528;&#x5F62;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>sub(repl, string[, count])
+</code></pre><p>&#x5176;&#x4E2D;&#xFF0C;repl &#x53EF;&#x4EE5;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF1A;</p>
+<p>&#x5982;&#x679C; repl &#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5219;&#x4F1A;&#x4F7F;&#x7528; repl &#x53BB;&#x66FF;&#x6362;&#x5B57;&#x7B26;&#x4E32;&#x6BCF;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x7684;&#x5B50;&#x4E32;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x66FF;&#x6362;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x53E6;&#x5916;&#xFF0C;repl &#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; id &#x7684;&#x5F62;&#x5F0F;&#x6765;&#x5F15;&#x7528;&#x5206;&#x7EC4;&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x7F16;&#x53F7; 0&#xFF1B;</p>
+<p>&#x5982;&#x679C; repl &#x662F;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5E94;&#x5F53;&#x53EA;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF08;Match &#x5BF9;&#x8C61;&#xFF09;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7528;&#x4E8E;&#x66FF;&#x6362;&#xFF08;&#x8FD4;&#x56DE;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x4E0D;&#x80FD;&#x518D;&#x5F15;&#x7528;&#x5206;&#x7EC4;&#xFF09;&#x3002;</p>
+<p>count &#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x6700;&#x591A;&#x66FF;&#x6362;&#x6B21;&#x6570;&#xFF0C;&#x4E0D;&#x6307;&#x5B9A;&#x65F6;&#x5168;&#x90E8;&#x66FF;&#x6362;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+p = re.compile(<span class="hljs-string">r&apos;(\w+) (\w+)&apos;</span>) <span class="hljs-comment"># \w = [A-Za-z0-9_]</span>
+s = <span class="hljs-string">&apos;hello 123, hello 456&apos;</span>
+
+print(p.sub(<span class="hljs-string">r&apos;hello world&apos;</span>, s)) <span class="hljs-comment"># &#x4F7F;&#x7528; &apos;hello world&apos; &#x66FF;&#x6362; &apos;hello 123&apos; &#x548C; &apos;hello 456&apos;</span>
+print(p.sub(<span class="hljs-string">r&apos;\2 \1&apos;</span>, s))       <span class="hljs-comment"># &#x5F15;&#x7528;&#x5206;&#x7EC4;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">func</span><span class="hljs-params">(m)</span>:</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;hi&apos;</span> + <span class="hljs-string">&apos; &apos;</span> + m.group(<span class="hljs-number">2</span>)
+
+print(p.sub(func, s))
+print(p.sub(func, s, <span class="hljs-number">1</span>))<span class="hljs-comment">#&#x66FF;&#x6362;&#x4E00;&#x6B21;</span>
+
+hello world, hello world
+<span class="hljs-number">123</span> hello, <span class="hljs-number">456</span> hello
+hi <span class="hljs-number">123</span>, hi <span class="hljs-number">456</span>
+hi <span class="hljs-number">123</span>, hello <span class="hljs-number">456</span>
+</code></pre>
+<h2 id="&#x5339;&#x914D;&#x4E2D;&#x6587;">&#x5339;&#x914D;&#x4E2D;&#x6587;</h2>
+<p>&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x60F3;&#x5339;&#x914D;&#x6587;&#x672C;&#x4E2D;&#x7684;&#x6C49;&#x5B57;&#xFF0C;&#x6709;&#x4E00;&#x70B9;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x4E2D;&#x6587;&#x7684; unicode &#x7F16;&#x7801;&#x8303;&#x56F4; &#x4E3B;&#x8981;&#x5728; [u4e00-u9fa5]&#xFF0C;&#x8FD9;&#x91CC;&#x8BF4;&#x4E3B;&#x8981;&#x662F;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x8303;&#x56F4;&#x5E76;&#x4E0D;&#x5B8C;&#x6574;&#xFF0C;&#x6BD4;&#x5982;&#x6CA1;&#x6709;&#x5305;&#x62EC;&#x5168;&#x89D2;&#xFF08;&#x4E2D;&#x6587;&#xFF09;&#x6807;&#x70B9;&#xFF0C;&#x4E0D;&#x8FC7;&#xFF0C;&#x5728;&#x5927;&#x90E8;&#x5206;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5E94;&#x8BE5;&#x662F;&#x591F;&#x7528;&#x7684;&#x3002;</p>
+<p>&#x5047;&#x8BBE;&#x73B0;&#x5728;&#x60F3;&#x628A;&#x5B57;&#x7B26;&#x4E32; title = u&apos;&#x4F60;&#x597D;&#xFF0C;hello&#xFF0C;&#x4E16;&#x754C;&apos; &#x4E2D;&#x7684;&#x4E2D;&#x6587;&#x63D0;&#x53D6;&#x51FA;&#x6765;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x505A;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> re
+
+title = <span class="hljs-string">u&apos;&#x4F60;&#x597D;&#xFF0C;hello&#xFF0C;&#x4E16;&#x754C;&apos;</span>
+pattern = re.compile(<span class="hljs-string">ur&apos;[\u4e00-\u9fa5]+&apos;</span>)
+result = pattern.findall(title)
+
+print(result)
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x5230;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x524D;&#x9762;&#x52A0;&#x4E0A;&#x4E86;&#x4E24;&#x4E2A;&#x524D;&#x7F00; ur&#xFF0C;&#x5176;&#x4E2D; r &#x8868;&#x793A;&#x4F7F;&#x7528;&#x539F;&#x59CB;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;u &#x8868;&#x793A;&#x662F; unicode &#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre><code>[u&apos;\u4f60\u597d&apos;, u&apos;\u4e16\u754c&apos;]
+</code></pre><h2 id="&#x6CE8;&#x610F;&#xFF1A;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;&#x4E0E;&#x975E;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;">&#x6CE8;&#x610F;&#xFF1A;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;&#x4E0E;&#x975E;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;</h2>
+<ol>
+<li>&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;&#xFF1A;&#x5728;&#x6574;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x6210;&#x529F;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#xFF0C;&#x5C3D;&#x53EF;&#x80FD;&#x591A;&#x7684;&#x5339;&#x914D; ( * )&#xFF1B;</li>
+<li>&#x975E;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;&#xFF1A;&#x5728;&#x6574;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x6210;&#x529F;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#xFF0C;&#x5C3D;&#x53EF;&#x80FD;&#x5C11;&#x7684;&#x5339;&#x914D; ( ? )&#xFF1B;</li>
+<li>Python&#x91CC;&#x6570;&#x91CF;&#x8BCD;&#x9ED8;&#x8BA4;&#x662F;&#x8D2A;&#x5A6A;&#x7684;&#x3002;</li>
+</ol>
+<h6 id="&#x4F8B;&#x4E00;-&#xFF1A;-&#x6E90;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;abbbc">&#x4F8B;&#x4E00; &#xFF1A; &#x6E90;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;<code>abbbc</code></h6>
+<ul>
+<li><p>&#x4F7F;&#x7528;&#x8D2A;&#x5A6A;&#x7684;&#x6570;&#x91CF;&#x8BCD;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;<code>ab*</code>&#xFF0C;&#x5339;&#x914D;&#x7ED3;&#x679C;&#xFF1A;<code>abbb</code>&#x3002;</p>
+<blockquote>
+<p><code>*</code> &#x51B3;&#x5B9A;&#x4E86;&#x5C3D;&#x53EF;&#x80FD;&#x591A;&#x5339;&#x914D; b&#xFF0C;&#x6240;&#x4EE5;a&#x540E;&#x9762;&#x6240;&#x6709;&#x7684; b &#x90FD;&#x51FA;&#x73B0;&#x4E86;&#x3002;</p>
+</blockquote>
+</li>
+<li><p>&#x4F7F;&#x7528;&#x975E;&#x8D2A;&#x5A6A;&#x7684;&#x6570;&#x91CF;&#x8BCD;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;<code>ab*?</code>&#xFF0C;&#x5339;&#x914D;&#x7ED3;&#x679C;&#xFF1A; a&#x3002;</p>
+<blockquote>
+<p>&#x5373;&#x4F7F;&#x524D;&#x9762;&#x6709; <code>*</code>&#xFF0C;&#x4F46;&#x662F; <code>?</code> &#x51B3;&#x5B9A;&#x4E86;&#x5C3D;&#x53EF;&#x80FD;&#x5C11;&#x5339;&#x914D; b&#xFF0C;&#x6240;&#x4EE5;&#x6CA1;&#x6709; b&#x3002;</p>
+</blockquote>
+</li>
+</ul>
+<h6 id="&#x4F8B;&#x4E8C;-&#xFF1A;-&#x6E90;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;aadivtest1divbbdivtest2divcc">&#x4F8B;&#x4E8C; &#xFF1A; &#x6E90;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;<code>aa&lt;div&gt;test1&lt;/div&gt;bb&lt;div&gt;test2&lt;/div&gt;cc</code></h6>
+<ul>
+<li>&#x4F7F;&#x7528;&#x8D2A;&#x5A6A;&#x7684;&#x6570;&#x91CF;&#x8BCD;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;<code>&lt;div&gt;.*&lt;/div&gt;</code></li>
+<li>&#x5339;&#x914D;&#x7ED3;&#x679C;&#xFF1A;<code>&lt;div&gt;test1&lt;/div&gt;bb&lt;div&gt;test2&lt;/div&gt;</code></li>
+</ul>
+<blockquote>
+<p>&#x8FD9;&#x91CC;&#x91C7;&#x7528;&#x7684;&#x662F;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;&#x3002;&#x5728;&#x5339;&#x914D;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;<code>&lt;/div&gt;</code>&#x65F6;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x4F7F;&#x6574;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x6210;&#x529F;&#xFF0C;&#x4F46;&#x662F;&#x7531;&#x4E8E;&#x91C7;&#x7528;&#x7684;&#x662F;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;&#xFF0C;&#x6240;&#x4EE5;&#x4ECD;&#x7136;&#x8981;&#x5411;&#x53F3;&#x5C1D;&#x8BD5;&#x5339;&#x914D;&#xFF0C;&#x67E5;&#x770B;&#x662F;&#x5426;&#x8FD8;&#x6709;&#x66F4;&#x957F;&#x7684;&#x53EF;&#x4EE5;&#x6210;&#x529F;&#x5339;&#x914D;&#x7684;&#x5B50;&#x4E32;&#x3002;&#x5339;&#x914D;&#x5230;&#x7B2C;&#x4E8C;&#x4E2A;<code>&lt;/div&gt;</code>&#x540E;&#xFF0C;&#x5411;&#x53F3;&#x518D;&#x6CA1;&#x6709;&#x53EF;&#x4EE5;&#x6210;&#x529F;&#x5339;&#x914D;&#x7684;&#x5B50;&#x4E32;&#xFF0C;&#x5339;&#x914D;&#x7ED3;&#x675F;&#xFF0C;&#x5339;&#x914D;&#x7ED3;&#x679C;&#x4E3A;<code>&lt;div&gt;test1&lt;/div&gt;bb&lt;div&gt;test2&lt;/div&gt;</code></p>
+</blockquote>
+<ul>
+<li>&#x4F7F;&#x7528;&#x975E;&#x8D2A;&#x5A6A;&#x7684;&#x6570;&#x91CF;&#x8BCD;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;<code>&lt;div&gt;.*?&lt;/div&gt;</code></li>
+<li>&#x5339;&#x914D;&#x7ED3;&#x679C;&#xFF1A;<code>&lt;div&gt;test1&lt;/div&gt;</code></li>
+</ul>
+<blockquote>
+<p>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E8C;&#x91C7;&#x7528;&#x7684;&#x662F;&#x975E;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x5339;&#x914D;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x201C;&lt;/div&gt;&#x201D;&#x65F6;&#x4F7F;&#x6574;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x6210;&#x529F;&#xFF0C;&#x7531;&#x4E8E;&#x91C7;&#x7528;&#x7684;&#x662F;&#x975E;&#x8D2A;&#x5A6A;&#x6A21;&#x5F0F;&#xFF0C;&#x6240;&#x4EE5;&#x7ED3;&#x675F;&#x5339;&#x914D;&#xFF0C;&#x4E0D;&#x518D;&#x5411;&#x53F3;&#x5C1D;&#x8BD5;&#xFF0C;&#x5339;&#x914D;&#x7ED3;&#x679C;&#x4E3A;&#x201C;<code>&lt;div&gt;test1&lt;/div&gt;</code>&#x201D;&#x3002; </p>
+</blockquote>
+<footer class="page-footer"><span class="copyright">CopyRight&#xA9;2019 &#x54B8;&#x9C7C;&#x8D85;&#x4EBA; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-03-19 00:47:24
+</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../files/jiexi.html" class="navigation navigation-prev " aria-label="Previous page: 爬虫解析库"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../files/re0.html" class="navigation navigation-next " aria-label="Next page: 正则表达式案例"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mcqx/js.cookie.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mcqx/mcqx.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fbqx/fbqx.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fbqx/js.cookie.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sectionx/sectionx.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"tbfed-pagefooter":{"copyright":"CopyRight©2019 咸鱼超人","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"sectionx":{"tag":"b"},"toggle-chapters":{},"splitter":{},"emphasize":{},"mcqx":{},"katex":{},"fbqx":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book 爬虫 -->
+</html>

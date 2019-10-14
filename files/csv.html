@@ -1,0 +1,914 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <!-- Start book 爬虫 -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>csv文件存储 | 爬虫</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-tbfed-pagefooter/footer.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-emphasize/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-mcqx/mcqx.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fbqx/fbqx.css">
+        
+    
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-sectionx/sectionx.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../files/threading.html" />
+    
+    
+    <link rel="prev" href="../files/json.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="3.3"
+        data-chapter-title="csv文件存储"
+        data-filepath="files/csv.md"
+        data-basepath=".."
+        data-revision="Thu Mar 28 2019 01:32:46 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        爬虫
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="files/readme.html">
+            
+                
+                    <a href="../files/readme.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        爬虫基础
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="files/spider01.html">
+            
+                
+                    <a href="../files/spider01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        爬虫基本原理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="files/spider02.html">
+            
+                
+                    <a href="../files/spider02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        python3编码问题
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="files/spider03.html">
+            
+                
+                    <a href="../files/spider03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        requests基础应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="files/spider04.html">
+            
+                
+                    <a href="../files/spider04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        requests进阶
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="files/spider05.html">
+            
+                
+                    <a href="../files/spider05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        抓包工具fiddler
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="files/spider06.html">
+            
+                
+                    <a href="../files/spider06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        了解:urllib
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="files/jiexi.html">
+            
+                
+                    <a href="../files/jiexi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        爬虫解析库
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="files/re.html">
+            
+                
+                    <a href="../files/re.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        正则表达式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="files/re0.html">
+            
+                
+                    <a href="../files/re0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        正则表达式案例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="files/xpath0.html">
+            
+                
+                    <a href="../files/xpath0.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        xpath
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="files/xpath01.html">
+            
+                
+                    <a href="../files/xpath01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        xpath案例
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="files/bs01.html">
+            
+                
+                    <a href="../files/bs01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        beautiful soup(了解)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="files/bs02.html">
+            
+                
+                    <a href="../files/bs02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        beautiful soup案例
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="files/shuju.html">
+            
+                
+                    <a href="../files/shuju.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        数据存储
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="files/txt.html">
+            
+                
+                    <a href="../files/txt.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        txt文件存储
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="files/json.html">
+            
+                
+                    <a href="../files/json.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        json文件存储
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3" data-path="files/csv.html">
+            
+                
+                    <a href="../files/csv.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        csv文件存储
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="files/threading.html">
+            
+                
+                    <a href="../files/threading.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        案例:多线程爬虫+json存储
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="files/dt.html">
+            
+                
+                    <a href="../files/dt.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        动态渲染页面爬取
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="files/dt01.html">
+            
+                
+                    <a href="../files/dt01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        动态html
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="files/dt02.html">
+            
+                
+                    <a href="../files/dt02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        selenium+phantosJS
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="files/dt03.html">
+            
+                
+                    <a href="../files/dt03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        网站模拟登录
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="files/dt04.html">
+            
+                
+                    <a href="../files/dt04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        动态页面模拟点击
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="files/dt05.html">
+            
+                
+                    <a href="../files/dt05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        执行js语句
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="files/scrapy.html">
+            
+                
+                    <a href="../files/scrapy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Scrapy框架
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="files/scrapy01.html">
+            
+                
+                    <a href="../files/scrapy01.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Scrapy安装配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="files/scrapy02.html">
+            
+                
+                    <a href="../files/scrapy02.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Scrapy shell
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="files/scrapy03.html">
+            
+                
+                    <a href="../files/scrapy03.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Item  Pipeline
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="files/scrapy04.html">
+            
+                
+                    <a href="../files/scrapy04.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        Spider
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="files/scrapy05.html">
+            
+                
+                    <a href="../files/scrapy05.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        CrawlSpider
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="files/scrapy06.html">
+            
+                
+                    <a href="../files/scrapy06.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        Request/Response
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="files/scrapy07.html">
+            
+                
+                    <a href="../files/scrapy07.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        Downloader Middlewares
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="files/scrapy08.html">
+            
+                
+                    <a href="../files/scrapy08.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                        settings
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >爬虫</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="csv&#x6587;&#x4EF6;&#x5B58;&#x50A8;">csv&#x6587;&#x4EF6;&#x5B58;&#x50A8;</h1>
+<p>CSV&#xFF0C;&#x5168;&#x79F0;&#x53EB;&#x505A; Comma-Separated Values&#xFF0C;&#x4E2D;&#x6587;&#x53EF;&#x4EE5;&#x53EB;&#x505A;&#x9017;&#x53F7;&#x5206;&#x9694;&#x503C;&#x6216;&#x5B57;&#x7B26;&#x5206;&#x9694;&#x503C;&#xFF0C;&#x5176;&#x6587;&#x4EF6;&#x4EE5;&#x7EAF;&#x6587;&#x672C;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;&#x8868;&#x683C;&#x6570;&#x636E;&#x3002;&#x8BE5;&#x6587;&#x4EF6;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5E8F;&#x5217;&#xFF0C;&#x53EF;&#x4EE5;&#x7531;&#x4EFB;&#x610F;&#x6570;&#x76EE;&#x7684;&#x8BB0;&#x5F55;&#x7EC4;&#x6210;&#xFF0C;&#x8BB0;&#x5F55;&#x95F4;&#x4EE5;&#x67D0;&#x79CD;&#x6362;&#x884C;&#x7B26;&#x5206;&#x9694;&#xFF0C;&#x6BCF;&#x6761;&#x8BB0;&#x5F55;&#x7531;&#x5B57;&#x6BB5;&#x7EC4;&#x6210;&#xFF0C;&#x5B57;&#x6BB5;&#x95F4;&#x7684;&#x5206;&#x9694;&#x7B26;&#x662F;&#x5176;&#x5B83;&#x5B57;&#x7B26;&#x6216;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x662F;&#x9017;&#x53F7;&#x6216;&#x5236;&#x8868;&#x7B26;&#xFF0C;&#x4E0D;&#x8FC7;&#x6240;&#x6709;&#x8BB0;&#x5F55;&#x90FD;&#x6709;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;&#x5B57;&#x6BB5;&#x5E8F;&#x5217;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x7ED3;&#x6784;&#x5316;&#x8868;&#x7684;&#x7EAF;&#x6587;&#x672C;&#x5F62;&#x5F0F;&#xFF0C;&#x5B83;&#x76F8;&#x6BD4; Excel &#x6587;&#x4EF6;&#x66F4;&#x52A0;&#x7B80;&#x4ECB;&#xFF0C;XLS &#x6587;&#x672C;&#x662F;&#x7535;&#x5B50;&#x8868;&#x683C;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x4E86;&#x6587;&#x672C;&#x3001;&#x6570;&#x503C;&#x3001;&#x516C;&#x5F0F;&#x548C;&#x683C;&#x5F0F;&#x7B49;&#x5185;&#x5BB9;&#xFF0C;&#x800C; CSV &#x4E2D;&#x4E0D;&#x5305;&#x542B;&#x8FD9;&#x4E9B;&#x5185;&#x5BB9;&#xFF0C;&#x5C31;&#x662F;&#x7279;&#x5B9A;&#x5B57;&#x7B26;&#x5206;&#x9694;&#x7684;&#x7EAF;&#x6587;&#x672C;&#xFF0C;&#x7ED3;&#x6784;&#x7B80;&#x5355;&#x6E05;&#x6670;&#xFF0C;&#x6240;&#x4EE5;&#x6709;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x7528; CSV &#x6765;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x662F;&#x6BD4;&#x8F83;&#x65B9;&#x4FBF;&#x7684;&#xFF0C;&#x672C;&#x8282;&#x6211;&#x4EEC;&#x6765;&#x8BB2;&#x89E3;&#x4E0B; Python &#x8BFB;&#x53D6;&#x548C;&#x5199;&#x5165; CSV &#x6587;&#x4EF6;&#x7684;&#x8FC7;&#x7A0B;&#x3002;</p>
+<h2 id="&#x5199;&#x5165;">&#x5199;&#x5165;</h2>
+<p>&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5148;&#x770B;&#x4E00;&#x4E2A;&#x6700;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> csv
+
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;data.csv&apos;</span>, <span class="hljs-string">&apos;w&apos;</span>) <span class="hljs-keyword">as</span> csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow([<span class="hljs-string">&apos;id&apos;</span>, <span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>])
+    writer.writerow([<span class="hljs-string">&apos;10001&apos;</span>, <span class="hljs-string">&apos;Mike&apos;</span>, <span class="hljs-number">20</span>])
+    writer.writerow([<span class="hljs-string">&apos;10002&apos;</span>, <span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-number">22</span>])
+    writer.writerow([<span class="hljs-string">&apos;10003&apos;</span>, <span class="hljs-string">&apos;Jordan&apos;</span>, <span class="hljs-number">21</span>])
+</code></pre>
+<p>&#x9996;&#x5148;&#x6253;&#x5F00;&#x4E86;&#x4E00;&#x4E2A; data.csv &#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x6307;&#x5B9A;&#x4E86;&#x6253;&#x5F00;&#x7684;&#x6A21;&#x5F0F;&#x4E3A; w&#xFF0C;&#x5373;&#x5199;&#x5165;&#xFF0C;&#x83B7;&#x5F97;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#xFF0C;&#x968F;&#x540E;&#x8C03;&#x7528; csv &#x5E93;&#x7684; writer() &#x65B9;&#x6CD5;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x5199;&#x5165;&#x5BF9;&#x8C61;&#xFF0C;&#x4F20;&#x5165;&#x8BE5;&#x53E5;&#x67C4;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528; writerow() &#x65B9;&#x6CD5;&#x4F20;&#x5165;&#x6BCF;&#x884C;&#x7684;&#x6570;&#x636E;&#x5373;&#x53EF;&#x5B8C;&#x6210;&#x5199;&#x5165;&#x3002;</p>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x675F;&#x540E;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; data.csv &#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x6570;&#x636E;&#x5C31;&#x6210;&#x529F;&#x5199;&#x5165;&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x6587;&#x672C;&#x5F62;&#x5F0F;&#x6253;&#x5F00;&#x7684;&#x8BDD;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>id,name,age
+10001,Mike,20
+10002,Bob,22
+10003,Jordan,21
+</code></pre><p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5199;&#x5165;&#x7684;&#x6587;&#x672C;&#x9ED8;&#x8BA4;&#x662F;&#x4EE5;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#xFF0C;&#x8C03;&#x7528;&#x4E00;&#x6B21; writerow() &#x65B9;&#x6CD5;&#x5373;&#x53EF;&#x5199;&#x5165;&#x4E00;&#x884C;&#x6570;&#x636E;&#xFF0C;&#x6211;&#x4EEC;&#x7528; Excel &#x6253;&#x5F00;</p>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x4FEE;&#x6539;&#x5217;&#x4E0E;&#x5217;&#x4E4B;&#x95F4;&#x7684;&#x5206;&#x9694;&#x7B26;&#x53EF;&#x4EE5;&#x4F20;&#x5165; delimiter &#x53C2;&#x6570;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> csv
+
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;data.csv&apos;</span>, <span class="hljs-string">&apos;w&apos;</span>) <span class="hljs-keyword">as</span> csvfile:
+    writer = csv.writer(csvfile, delimiter=<span class="hljs-string">&apos; &apos;</span>)
+    writer.writerow([<span class="hljs-string">&apos;id&apos;</span>, <span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>])
+    writer.writerow([<span class="hljs-string">&apos;10001&apos;</span>, <span class="hljs-string">&apos;Mike&apos;</span>, <span class="hljs-number">20</span>])
+    writer.writerow([<span class="hljs-string">&apos;10002&apos;</span>, <span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-number">22</span>])
+    writer.writerow([<span class="hljs-string">&apos;10003&apos;</span>, <span class="hljs-string">&apos;Jordan&apos;</span>, <span class="hljs-number">21</span>])
+</code></pre>
+<p>&#x4F8B;&#x5982;&#x8FD9;&#x91CC;&#x5728;&#x521D;&#x59CB;&#x5316;&#x5199;&#x5165;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#x4F20;&#x5165; delimiter &#x4E3A;&#x7A7A;&#x683C;&#xFF0C;&#x8FD9;&#x6837;&#x8F93;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#x7684;&#x6BCF;&#x4E00;&#x5217;&#x5C31;&#x662F;&#x4EE5;&#x7A7A;&#x683C;&#x5206;&#x9694;&#x7684;&#x4E86;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python">id name age
+<span class="hljs-number">10001</span> Mike <span class="hljs-number">20</span>
+<span class="hljs-number">10002</span> Bob <span class="hljs-number">22</span>
+<span class="hljs-number">10003</span> Jordan <span class="hljs-number">21</span>
+</code></pre>
+<p>&#x53E6;&#x5916;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x8C03;&#x7528; writerows() &#x65B9;&#x6CD5;&#x540C;&#x65F6;&#x5199;&#x5165;&#x591A;&#x884C;&#xFF0C;&#x6B64;&#x65F6;&#x53C2;&#x6570;&#x5C31;&#x9700;&#x8981;&#x4E3A;&#x4E8C;&#x7EF4;&#x5217;&#x8868;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> csv
+
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;data.csv&apos;</span>, <span class="hljs-string">&apos;w&apos;</span>) <span class="hljs-keyword">as</span> csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow([<span class="hljs-string">&apos;id&apos;</span>, <span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>])
+    writer.writerows([[<span class="hljs-string">&apos;10001&apos;</span>, <span class="hljs-string">&apos;Mike&apos;</span>, <span class="hljs-number">20</span>], [<span class="hljs-string">&apos;10002&apos;</span>, <span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-number">22</span>], [<span class="hljs-string">&apos;10003&apos;</span>, <span class="hljs-string">&apos;Jordan&apos;</span>, <span class="hljs-number">21</span>]])
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x6548;&#x679C;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>id,name,age
+10001,Mike,20
+10002,Bob,22
+10003,Jordan,21
+</code></pre><p>&#x4F46;&#x662F;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x722C;&#x866B;&#x722C;&#x53D6;&#x7684;&#x90FD;&#x662F;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#xFF0C;&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x4F1A;&#x7528;&#x5B57;&#x5178;&#x6765;&#x8868;&#x793A;&#xFF0C;&#x5728; csv &#x5E93;&#x4E2D;&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x5B57;&#x5178;&#x7684;&#x5199;&#x5165;&#x65B9;&#x5F0F;&#xFF0C;&#x5B9E;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> csv
+
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;data.csv&apos;</span>, <span class="hljs-string">&apos;w&apos;</span>) <span class="hljs-keyword">as</span> csvfile:
+    fieldnames = [<span class="hljs-string">&apos;id&apos;</span>, <span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>]
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerow({<span class="hljs-string">&apos;id&apos;</span>: <span class="hljs-string">&apos;10001&apos;</span>, <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;Mike&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">20</span>})
+    writer.writerow({<span class="hljs-string">&apos;id&apos;</span>: <span class="hljs-string">&apos;10002&apos;</span>, <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;Bob&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">22</span>})
+    writer.writerow({<span class="hljs-string">&apos;id&apos;</span>: <span class="hljs-string">&apos;10003&apos;</span>, <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;Jordan&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">21</span>})
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5148;&#x5B9A;&#x4E49;&#x4E86;&#x4E09;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x7528; fieldnames &#x8868;&#x793A;&#xFF0C;&#x7136;&#x540E;&#x4F20;&#x7ED9; DictWriter &#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#x5199;&#x5165;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x53EF;&#x4EE5;&#x5148;&#x8C03;&#x7528; writeheader() &#x65B9;&#x6CD5;&#x5148;&#x5199;&#x5165;&#x5934;&#x4FE1;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x8C03;&#x7528; writerow() &#x65B9;&#x6CD5;&#x4F20;&#x5165;&#x76F8;&#x5E94;&#x5B57;&#x5178;&#x5373;&#x53EF;&#xFF0C;&#x6700;&#x7EC8;&#x5199;&#x5165;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>id,name,age
+10001,Mike,20
+10002,Bob,22
+10003,Jordan,21
+</code></pre><p>&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x5B57;&#x5178;&#x5230; CSV &#x6587;&#x4EF6;&#x7684;&#x5199;&#x5165;&#x4E86;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x8FFD;&#x52A0;&#x5199;&#x5165;&#x7684;&#x8BDD;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#x7684;&#x6253;&#x5F00;&#x6A21;&#x5F0F;&#xFF0C;&#x5982;&#x5C06; open() &#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x6539;&#x6210; a &#x5C31;&#x53EF;&#x4EE5;&#x53D8;&#x6210;&#x8FFD;&#x52A0;&#x5199;&#x5165;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> csv
+
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;data.csv&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>) <span class="hljs-keyword">as</span> csvfile:
+    fieldnames = [<span class="hljs-string">&apos;id&apos;</span>, <span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>]
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    writer.writerow({<span class="hljs-string">&apos;id&apos;</span>: <span class="hljs-string">&apos;10004&apos;</span>, <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;Durant&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">22</span>})
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x518D;&#x6267;&#x884C;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#xFF0C;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x4FBF;&#x4F1A;&#x53D8;&#x6210;&#xFF1A;</p>
+<pre><code>id,name,age
+10001,Mike,20
+10002,Bob,22
+10003,Jordan,21
+10004,Durant,22
+</code></pre><p>&#x53EF;&#x89C1;&#x6570;&#x636E;&#x88AB;&#x8FFD;&#x52A0;&#x5199;&#x5165;&#x5230;&#x4E86;&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8981;&#x5199;&#x5165;&#x4E2D;&#x6587;&#x5185;&#x5BB9;&#x7684;&#x8BDD;&#x53EF;&#x80FD;&#x4F1A;&#x9047;&#x5230;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6B64;&#x65F6;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7ED9; open() &#x53C2;&#x6570;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x7F16;&#x7801;&#x683C;&#x5F0F;&#xFF0C;&#x6BD4;&#x5982;&#x8FD9;&#x91CC;&#x518D;&#x5199;&#x5165;&#x4E00;&#x884C;&#x5305;&#x542B;&#x4E2D;&#x6587;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4EE3;&#x7801;&#x9700;&#x8981;&#x6539;&#x5199;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> csv
+
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;data.csv&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, encoding=<span class="hljs-string">&apos;utf-8&apos;</span>) <span class="hljs-keyword">as</span> csvfile:
+    fieldnames = [<span class="hljs-string">&apos;id&apos;</span>, <span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>]
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    writer.writerow({<span class="hljs-string">&apos;id&apos;</span>: <span class="hljs-string">&apos;10005&apos;</span>, <span class="hljs-string">&apos;name&apos;</span>: <span class="hljs-string">&apos;&#x738B;&#x4F1F;&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>: <span class="hljs-number">22</span>})
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x7ED9; open() &#x51FD;&#x6570;&#x6307;&#x5B9A;&#x7F16;&#x7801;&#xFF0C;&#x5426;&#x5219;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x751F;&#x7F16;&#x7801;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x4EE5;&#x4E0A;&#x4FBF;&#x662F; CSV &#x6587;&#x4EF6;&#x7684;&#x5199;&#x5165;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x63A5;&#x89E6;&#x8FC7; Pandas &#x7B49;&#x5E93;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x8C03;&#x7528; DataFrame &#x5BF9;&#x8C61;&#x7684; to_csv() &#x65B9;&#x6CD5;&#x4E5F;&#x53EF;&#x4EE5;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x5730;&#x5C06;&#x6570;&#x636E;&#x5199;&#x5165;&#x5230; CSV &#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<h2 id="&#x8BFB;&#x53D6;">&#x8BFB;&#x53D6;</h2>
+<p>&#x6211;&#x4EEC;&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; csv &#x5E93;&#x6765;&#x8BFB;&#x53D6; CSV &#x6587;&#x4EF6;&#xFF0C;&#x4F8B;&#x5982;&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x5C06;&#x521A;&#x624D;&#x5199;&#x5165;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x8BFB;&#x53D6;&#x51FA;&#x6765;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> csv
+
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;data.csv&apos;</span>, <span class="hljs-string">&apos;r&apos;</span>, encoding=<span class="hljs-string">&apos;utf-8&apos;</span>) <span class="hljs-keyword">as</span> csvfile:
+    reader = csv.reader(csvfile)
+    <span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> reader:
+        print(row)
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>[&apos;id&apos;, &apos;name&apos;, &apos;age&apos;]
+[&apos;10001&apos;, &apos;Mike&apos;, &apos;20&apos;]
+[&apos;10002&apos;, &apos;Bob&apos;, &apos;22&apos;]
+[&apos;10003&apos;, &apos;Jordan&apos;, &apos;21&apos;]
+[&apos;10004&apos;, &apos;Durant&apos;, &apos;22&apos;]
+[&apos;10005&apos;, &apos;&#x738B;&#x4F1F;&apos;, &apos;22&apos;]
+</code></pre><p>&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x6784;&#x9020;&#x7684;&#x662F; Reader &#x5BF9;&#x8C61;&#xFF0C;&#x901A;&#x8FC7;&#x904D;&#x5386;&#x8F93;&#x51FA;&#x4E86;&#x6BCF;&#x884C;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6BCF;&#x4E00;&#x884C;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x5F62;&#x5F0F;&#xFF0C;&#x6CE8;&#x610F;&#x5728;&#x8FD9;&#x91CC;&#x5982;&#x679C; CSV &#x6587;&#x4EF6;&#x4E2D;&#x5305;&#x542B;&#x4E2D;&#x6587;&#x7684;&#x8BDD;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x7F16;&#x7801;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x63A5;&#x89E6;&#x8FC7; Pandas &#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x5229;&#x7528; read_csv() &#x65B9;&#x6CD5;&#x5C06;&#x6570;&#x636E;&#x4ECE; CSV &#x4E2D;&#x8BFB;&#x53D6;&#x51FA;&#x6765;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> pandas  <span class="hljs-keyword">as</span> pd
+
+df = pd.read_csv(<span class="hljs-string">&apos;data.csv&apos;</span>)
+print(df)
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>      id    name  age
+0  10001    Mike   20
+1  10002     Bob   22
+2  10003  Jordan   21
+3  10004  Durant   22
+4  10005      &#x738B;&#x4F1F;   22
+</code></pre><p>&#x5728;&#x505A;&#x6570;&#x636E;&#x5206;&#x6790;&#x7684;&#x65F6;&#x5019;&#x6B64;&#x79CD;&#x65B9;&#x6CD5;&#x7528;&#x7684;&#x6BD4;&#x8F83;&#x591A;&#xFF0C;&#x4E5F;&#x662F;&#x4E00;&#x79CD;&#x6BD4;&#x8F83;&#x65B9;&#x4FBF;&#x7684;&#x8BFB;&#x53D6; CSV &#x6587;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;&#x3002; </p>
+<footer class="page-footer"><span class="copyright">CopyRight&#xA9;2019 &#x54B8;&#x9C7C;&#x8D85;&#x4EBA; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-03-25 00:20:01
+</span></footer>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../files/json.html" class="navigation navigation-prev " aria-label="Previous page: json文件存储"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../files/threading.html" class="navigation navigation-next " aria-label="Next page: 案例:多线程爬虫+json存储"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mcqx/js.cookie.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mcqx/mcqx.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fbqx/fbqx.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fbqx/js.cookie.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sectionx/sectionx.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"tbfed-pagefooter":{"copyright":"CopyRight©2019 咸鱼超人","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"sectionx":{"tag":"b"},"toggle-chapters":{},"splitter":{},"emphasize":{},"mcqx":{},"katex":{},"fbqx":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book 爬虫 -->
+</html>
